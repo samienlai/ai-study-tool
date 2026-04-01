@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 学习小助手</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 顶部通栏广告位 -->
+  <div class="ad-banner ad-top">
+    <span>📢 广告位</span>
+  </div>
+
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="logo">🧠 AI 学习小助手</div>
+    <div class="tabs">
+      <button class="tab active" data-tab="quiz">在线刷题</button>
+      <button class="tab" data-tab="translate">中英翻译</button>
+      <button class="tab" data-tab="summary">知识点总结</button>
+    </div>
+  </nav>
+
+  <!-- 主内容区 -->
+  <main class="container">
+
+    <!-- ===== 在线刷题 ===== -->
+    <section id="quiz" class="panel active">
+      <h2>📝 在线刷题</h2>
+
+      <!-- 科目选择 -->
+      <div class="subject-bar">
+        <button class="subject-btn active" data-subject="english">英语基础</button>
+        <button class="subject-btn" data-subject="chinese">语文常识</button>
+        <button class="subject-btn" data-subject="math">数学基础</button>
+      </div>
+
+      <!-- 题目列表 -->
+      <div id="quiz-area"></div>
+
+      <!-- 得分 & 刷新 -->
+      <div id="quiz-footer" class="hidden">
+        <div class="score-display" id="score-display"></div>
+        <button class="btn btn-primary" id="btn-refresh">🔄 刷新再来一组</button>
+      </div>
+
+      <!-- 刷题模块下方广告位 -->
+      <div class="ad-banner ad-inline">
+        <span>📢 广告位</span>
+      </div>
+    </section>
+
+    <!-- ===== 中英翻译 ===== -->
+    <section id="translate" class="panel">
+      <h2>🌐 中英互译</h2>
+
+      <textarea id="translate-input" class="input-box" rows="5" placeholder="请输入要翻译的文字……"></textarea>
+
+      <div class="btn-group">
+        <button class="btn btn-primary" id="btn-zh-en">中 → 英</button>
+        <button class="btn btn-primary" id="btn-en-zh">英 → 中</button>
+      </div>
+
+      <div id="translate-result" class="result-box hidden">
+        <h3>翻译结果</h3>
+        <p id="translate-output"></p>
+        <button class="btn btn-small" id="btn-copy-translate">📋 一键复制</button>
+      </div>
+
+      <div id="translate-loading" class="loading hidden">翻译中，请稍候……</div>
+
+      <!-- 翻译模块下方广告位 -->
+      <div class="ad-banner ad-inline">
+        <span>📢 广告位</span>
+      </div>
+    </section>
+
+    <!-- ===== 知识点总结 ===== -->
+    <section id="summary" class="panel">
+      <h2>📊 知识点总结</h2>
+
+      <textarea id="summary-input" class="input-box" rows="6" placeholder="请输入一段文字，点击下方按钮进行基础版总结……"></textarea>
+
+      <div class="btn-group">
+        <button class="btn btn-primary" id="btn-summary">🤖 AI 总结（基础版）</button>
+      </div>
+
+      <div id="summary-result" class="result-box hidden">
+        <h3>总结结果 <small class="badge">基础版总结</small></h3>
+        <div id="summary-output"></div>
+        <button class="btn btn-small" id="btn-copy-summary">📋 一键复制</button>
+      </div>
+
+      <!-- 总结模块下方广告位 -->
+      <div class="ad-banner ad-inline">
+        <span>📢 广告位</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- 底部通栏广告位 -->
+  <div class="ad-banner ad-bottom">
+    <span>📢 广告位 — 底部通栏</span>
+  </div>
+
+  <footer class="footer">
+    <p>AI 学习小助手 © 2026 · 纯前端学习工具</p>
+  </footer>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
